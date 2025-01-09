@@ -23,12 +23,14 @@ export const Navbar = () => {
                 <ul className="hidden lg:flex ml-14 space-x-12">
                     {navItems.map((item,index) => (
                         <li>
-                            <a href={item.href}>{item.label}</a>
+                            <a 
+                            className="hover:text-orange-500"
+                            href={item.href}>{item.label}</a>
                         </li>
                     ))}
                 </ul>
                 <div className="hidden lg:flex justify-center space-x-12 itmes-center">
-                    <a href="#" className="py-2 px-3 border rounded-md">
+                    <a href="#" className="py-2 px-3 border rounded-md hover:text-orange-600 hover:border-orange-600">
                         Sign In
                         </a>
                     <a href="#" className="bg-gradient-to-r from-orange-500 to-orange-800 py-2
