@@ -1,8 +1,10 @@
-import {Menu,X} from "lucide-react" ;
+import { Link } from 'react-scroll';
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import React from 'react'
-import logo from "../assets/logo.png"
+import React from 'react';
+import logo from "../assets/logo.png";
 import { navItems } from './../constants/index';
+
 
 export const Navbar = () => {
 
@@ -23,10 +25,9 @@ export const Navbar = () => {
                 <ul className="hidden lg:flex ml-14 space-x-12">
                     {navItems.map((item,index) => (
                         <li>
-                            <a 
-                            className="hover:text-orange-500"
-                            href={item.href}>{item.label}</a>
+                            <Link className="hover:text-orange-500 cursor-pointer" to={item.href} smooth={true} duration={500} > {item.label} </Link>
                         </li>
+                        
                     ))}
                 </ul>
                 <div className="hidden lg:flex justify-center space-x-12 itmes-center">
@@ -49,7 +50,7 @@ export const Navbar = () => {
                         <ul>
                             {navItems.map((item,index)=>(
                                 <li key={index} className="py-4 hover:text-orange-600">
-                                    <a href={item.href}>{item.label}</a>
+                                   <Link className="cursor-pointer" to={item.href} smooth={true} duration={500} onClick={toggleNavbar} > {item.label} </Link>
                                 </li>
                             ))}
                         </ul>
