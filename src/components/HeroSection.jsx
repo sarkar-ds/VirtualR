@@ -22,7 +22,7 @@ export const HeroSection = () => {
                 Start for free
             </a>
             <a href="#"
-            className='py-3 px-4 mx-3 rounded-md border'>Documentation</a>
+            className='py-3 px-4 mx-3 rounded-md hover:text-orange-600 border hover:border-orange-600'>Documentation</a>
          </div>
          <div className="flex mt-10 justify-center">
             <video 
